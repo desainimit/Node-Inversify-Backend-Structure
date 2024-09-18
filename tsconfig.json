@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["ES6"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    /* Modules */
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@controllers": ["src/controllers/*"],
+      "@models": ["src/models/index"],
+      "@services": ["src/services/index"],
+      "@middlewares": ["src/middlewares/index"],
+      "@utils": ["src/utils/index"],
+      "@config": ["config"],
+      "@types": ["src/types"],
+      "@validators": ["src/validators/index"],
+      "@interfaces": ["src/interfaces/index"],
+      "@constants": ["src/constants/index"],
+      "@db": ["src/db"],
+      "@public": ["src/public"],
+      "@queries": ["src/queries/index"],
+      "@templates": ["src/templates/index"],
+      "@views": ["src/views/index"],
+      "@inversifyConfig": ["src/inversify.config"]
+    },
+    "typeRoots": ["./node_modules/@types", "src/types"],
+
+    "esModuleInterop": true,
+
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["./src/**/*", "./src/types/*.d.ts"],
+}

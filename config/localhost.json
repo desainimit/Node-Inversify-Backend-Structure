@@ -1,0 +1,19 @@
+{
+    "CLIENT_URL": "http://localhost:4200",
+    "PORT": 8000,
+    "DB_URL": "mongodb://localhost:27017/Canteen-Management-System",
+    "ACCESS_TOKEN_SECRET": "r%2sxdu%pu^_9@j12sq04xsj^^z967^6^kc119bv2s_0*5kv_fsdsdfdgs",
+    "ACCESS_TOKEN_LIFE": "1d",
+    "REFRESH_TOKEN_SECRET": "r%2sxdu%pu^_9@j12sq04xsj^^z967^bfdsfsjjfhjfjsfvuwyetwbdbf",
+    "REFRESH_TOKEN_LIFE": "7d",
+    "TEMP_OTP_TOKEN_SECRET": "dsfsiufhgherughinsndkljfnskhfiughwuirehiuhascbbjdguyafgewg",
+    "TEMP_OTP_TOKEN_LIFE": "5min",
+    "MAIL_HOST": "smtp.gmail.com",
+    "MAIL_PORT": 465,
+    "MAIL_USER": "nimitdesai412@gmail.com",
+    "MAIL_PASS": "nbib vykc wfld hfps",
+    "MAIL_FROM": "nimitdesai412@gmail.com",
+    "CLOUDINARY_CLOUD_NAME": "nimitdesai",
+    "CLOUDINARY_API_KEY": "922791277154876",
+    "CLOUDINARY_API_SECRET": "c_QcXiyMIuzS2K-L3LKNLILWSoA"
+}
