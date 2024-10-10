@@ -1,4 +1,4 @@
-const message = {
+const MESSAGE = {
   BAD_REQUEST: "An error occurred",
   INTERNAL_STATUS: "Internal Server Error",
   NOT_FOUND: "Not Found",
@@ -129,4 +129,4 @@ const message = {
   ADMIN_NOT_CREATED: "Admin not created",
 };
 
-export { message };
+export { MESSAGE };

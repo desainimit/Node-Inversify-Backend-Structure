@@ -1,16 +1,17 @@
 import mongoose from "mongoose";
 import config from "config";
-import { CustomError, message } from "@utils";
+import { CustomError } from "@utils";
+import { MESSAGE } from "@constants";
 
 const dbConnect = async () => {
   try {
     await mongoose.connect(config.get("DB_URL"));
-    console.log(message.MONGODB_CONNECTED);
+    console.log(MESSAGE.MONGODB_CONNECTED);
   } catch (error: unknown) {
     if (error instanceof Error) {
       throw CustomError.internal(error.message);
     } else {
-      throw CustomError.internal(message.INTERNAL_STATUS);
+      throw CustomError.internal(MESSAGE.INTERNAL_STATUS);
     }
   }
 };

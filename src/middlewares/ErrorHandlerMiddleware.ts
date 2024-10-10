@@ -1,6 +1,6 @@
 import { injectable } from "inversify";
-import { CustomError, CustomResponse, message } from "@/utils";
-import { statusCode } from "@/constants";
+import { CustomError } from "@/utils";
+import { STATUSCODE, MESSAGE } from "@/constants";
 import { Request, Response, NextFunction } from "express";
 
 @injectable()
@@ -9,21 +9,21 @@ export class ErrorHandlerMiddleware {
     res.setHeader("Content-Type", "application/json");
 
     if (err instanceof CustomError) {
-      res.status(err.statusCode).json({
+      res.status(err.STATUSCODE).json({
         status: err.status,
         message: err.message,
         errors: err.errors,
         data: err.data,
       });
     } else if (err instanceof Error) {
-      res.status(statusCode.INTERNAL_STATUS).json({
+      res.status(STATUSCODE.INTERNAL_STATUS).json({
         status: false,
-        message: message.INTERNAL_STATUS,
+        message: MESSAGE.INTERNAL_STATUS,
       });
     } else {
-      res.status(statusCode.BAD_REQUEST).json({
+      res.status(STATUSCODE.BAD_REQUEST).json({
         status: false,
-        message: message.BAD_REQUEST,
+        message: MESSAGE.BAD_REQUEST,
       });
     }
   }

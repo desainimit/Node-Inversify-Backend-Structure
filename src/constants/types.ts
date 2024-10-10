@@ -1,6 +1,6 @@
-const types = {
+const TYPES = {
   AuthService: Symbol.for("AuthService"),
   ErrorHandlerMiddleware: Symbol.for("ErrorHandlerMiddleware"),
 };
 
-export { types };
+export { TYPES };

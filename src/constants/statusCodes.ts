@@ -1,4 +1,4 @@
-const statusCode = {
+const STATUSCODE = {
   SUCCESS_STATUS: 200,
   CREATED_STATUS: 201,
   ERROR_STATUS: 403,
@@ -12,4 +12,4 @@ const statusCode = {
   UNAUTHORIZED_DEVICE_ID: 501,
 };
 
-export { statusCode };
+export { STATUSCODE };

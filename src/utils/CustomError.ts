@@ -1,13 +1,13 @@
-import { statusCode } from "@constants";
+import { STATUSCODE } from "@constants";
 class CustomError extends Error {
-  public statusCode: number;
+  public STATUSCODE: number;
   public data: any;
   public status: boolean;
   public errors: any[];
   public stack: string | undefined;
-  constructor(statusCode: number, message: string, errors: any[] = []) {
+  constructor(STATUSCODE: number, message: string, errors: any[] = []) {
     super();
-    this.statusCode = statusCode;
+    this.STATUSCODE = STATUSCODE;
     this.data = null;
     this.status = false;
     this.message = message;
@@ -17,22 +17,22 @@ class CustomError extends Error {
     Object.setPrototypeOf(this, CustomError.prototype);
   }
   static badRequest(message: string, errors: any[] = []) {
-    return new CustomError(statusCode.BAD_REQUEST, message, errors);
+    return new CustomError(STATUSCODE.BAD_REQUEST, message, errors);
   }
   static internal(message: string) {
-    return new CustomError(statusCode.INTERNAL_STATUS, message);
+    return new CustomError(STATUSCODE.INTERNAL_STATUS, message);
   }
   static notFound(message: string) {
-    return new CustomError(statusCode.NOT_FOUND, message);
+    return new CustomError(STATUSCODE.NOT_FOUND, message);
   }
   static unauthorized(message: string) {
-    return new CustomError(statusCode.UNAUTHORIZED_STATUS, message);
+    return new CustomError(STATUSCODE.UNAUTHORIZED_STATUS, message);
   }
   static forbidden(message: string) {
-    return new CustomError(statusCode.FORBIDDEN_STATUS, message);
+    return new CustomError(STATUSCODE.FORBIDDEN_STATUS, message);
   }
   static conflict(message: string) {
-    return new CustomError(statusCode.CONFLICT, message);
+    return new CustomError(STATUSCODE.CONFLICT, message);
   }
 }
 

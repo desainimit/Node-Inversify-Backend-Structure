@@ -1,6 +1,6 @@
 {
     "CLIENT_URL": "http://localhost:4200",
-    "PORT": 8000,
+    "PORT": 8001,
     "DB_URL": "mongodb://localhost:27017/Canteen-Management-System",
     "ACCESS_TOKEN_SECRET": "r%2sxdu%pu^_9@j12sq04xsj^^z967^6^kc119bv2s_0*5kv_fsdsdfdgs",
     "ACCESS_TOKEN_LIFE": "1d",

@@ -9,8 +9,8 @@ import { container } from "@inversifyConfig";
 import path from "path";
 import cookiesParser from "cookie-parser";
 import { dbConnect } from "@db";
-import { CustomError, message } from "@utils";
-import { statusCode, types } from "@constants";
+import { CustomError } from "@utils";
+import { STATUSCODE, TYPES, MESSAGE } from "@constants";
 
 const app = express();
 app.use(
@@ -43,16 +43,16 @@ server.setConfig(async () => {
     await dbConnect();
   } catch (error: unknown) {
     if (error instanceof Error) {
-      throw new CustomError(statusCode.BAD_REQUEST, error.message);
+      throw new CustomError(STATUSCODE.BAD_REQUEST, error.message);
     } else {
-      throw new CustomError(statusCode.BAD_REQUEST, message.BAD_REQUEST);
+      throw new CustomError(STATUSCODE.BAD_REQUEST, MESSAGE.BAD_REQUEST);
     }
   }
 });
 
 server.setErrorConfig((app) => {
   const errorHandlerMiddlewareInstance = container.get<ErrorHandlerMiddleware>(
-    types.ErrorHandlerMiddleware
+    TYPES.ErrorHandlerMiddleware
   );
 
   app.use(
